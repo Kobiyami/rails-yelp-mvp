@@ -25,6 +25,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_11_27_101409) do
     t.text "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["restaurant_id"], name: "index_reviews_on_restaurant_id"
   end
-
+  add_foreign_key "reviews", "restaurants"
 end
